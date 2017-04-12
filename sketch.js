@@ -104,13 +104,16 @@ function drawGraph(startY, p1){
 function makeSpider(pIndex){
 	var centerX = windowWidth*3/8 + windowWidth/4;
 	var radius = windowWidth/6;
+	push();
 	beginShape();
-
+	stroke('rgba(100%, 100%, 100%, 0.5)');
+	strokeWeight(2);
 	angleMode(DEGREES);
 	for(var x =0; x < 8;x++){
 		vertex(centerX+radius*cos(45*x),windowHeight/2+radius*sin(45*x));
 	}
 	endShape(CLOSE);
+	pop();
 
 	push();
 	strokeWeight(1);
