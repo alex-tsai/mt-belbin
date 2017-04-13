@@ -44,6 +44,14 @@ function draw() {
 	textSize(24);
   	textFont("Cutive Mono");
   	textAlign(LEFT);
+
+  	push();
+  	textAlign(RIGHT);
+  	textSize(32);
+  	fill(255);
+  	text("?",windowWidth-28,windowHeight-28);
+  	pop();
+
   	for(var x = 0; x < people.length; x++){
   		fill(people[x].color);
   		text(people[x].name, 72, 72 + x*44);
@@ -63,6 +71,13 @@ function draw() {
   		drawGraph(60 +72 + (windowHeight - 216),6);
   	}
   	
+
+}
+
+function mousePressed() {
+	if(mouseX > windowWidth - 48 && mouseY > windowHeight - 48){
+		window.open('https://drive.google.com/file/d/0Bzz4DLZxh6ywaGE2WG4wRHhDOVU/view', '_blank');
+	}
 }
 
 function drawGraphAxis() {
