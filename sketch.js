@@ -102,7 +102,7 @@ function drawGraphAxis() {
 function drawGraph(startY, p1){
 	noStroke();
 	var h = [0,0,0,0,0,0,0,0];
-	var unit = (windowHeight - 216)/200;
+	var unit = (windowHeight - 216)/240;
 
 	for(var x = 0; x < 8; x++){
 		for(var y = 0; y < 8; y++){
